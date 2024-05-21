@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  mode: 'development', // Add this line
   entry: './src/index.ts',
   module: {
     rules: [
