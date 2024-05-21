@@ -1,0 +1,20 @@
+{
+    "name": "typescript-webpage",
+    "version": "1.0.0",
+    "description": "A simple webpage written in TypeScript",
+    "scripts": {
+      "build": "webpack",
+      "start": "webpack serve"
+    },
+    "devDependencies": {
+      "typescript": "^4.0.0",
+      "webpack": "^5.0.0",
+      "webpack-cli": "^4.0.0",
+      "webpack-dev-server": "^3.11.0",
+      "ts-loader": "^8.0.0"
+    },
+    "dependencies": {
+      "page": "^1.11.6"
+    }
+  }
+  
