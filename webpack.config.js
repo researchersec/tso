@@ -1,8 +1,8 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'development', // Add this line
-  entry: './src/index.ts',
+  mode: 'development', // Set the mode to development
+  entry: ['./src/index.ts', 'bootstrap/dist/css/bootstrap.min.css'],
   module: {
     rules: [
       {
@@ -10,6 +10,14 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.json$/,
+        type: 'json'
+      }
     ],
   },
   resolve: {

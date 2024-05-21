@@ -1,6 +1,14 @@
-export const items = [
-    { id: 1, name: 'Item 1', description: 'This is the description for Item 1.' },
-    { id: 2, name: 'Item 2', description: 'This is the description for Item 2.' },
-    { id: 3, name: 'Item 3', description: 'This is the description for Item 3.' },
-  ];
-  
+import { getItemData } from './dataLoader';
+
+interface Item {
+  auctionHouseId: number;
+  itemId: number;
+  petSpeciesId: number | null;
+  minBuyout: number;
+  quantity: number;
+  marketValue: number;
+  historical: number;
+  numAuctions: number;
+}
+
+export const items: Item[] = getItemData();

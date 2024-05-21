@@ -1,9 +1,12 @@
-import page from 'page';
+import page, { Context } from 'page';
 import { renderItem } from './item';
 import { renderHome } from './index';
 
-page('/', renderHome);
-page('/item/:id', ctx => {
+page('/', () => {
+  const content = document.getElementById('content') as HTMLDivElement;
+  content.innerHTML = renderHome();
+});
+page('/item/:id', (ctx: Context) => {
   const content = document.getElementById('content') as HTMLDivElement;
   content.innerHTML = renderItem(parseInt(ctx.params.id));
 });
